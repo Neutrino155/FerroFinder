@@ -97,14 +97,6 @@ it must be an odd integer of at least three. `--no-compute-becs` and
 and settings. See the [user guide](docs/user-guide.md) for input rules and
 the other search bounds.
 
-## Screening example
-
-The [MP-Ferroelectric screening](screenings/mp_ferroelectric_250/README.md)
-is the worked 250-material example. It includes held-out validation, paired
-fixed-cell and variable-cell results, per-material plots, and an interactive
-explorer. The method, recovery rates, and limitations are summarized in
-[the screening report](screenings/mp_ferroelectric_250/reports/method_and_results.md).
-
 ## Scientific limits
 
 These are model-generated structural hypotheses. They require independent
