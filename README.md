@@ -1,3 +1,7 @@
+<p align="center">
+<img src="ferrofinder_logo.png" alt="FerroFinder logo" width="600">
+</p>
+
 # FerroFinder
 
 FerroFinder uses a field-aware MACE-Field model to propose nonpolar-parent
