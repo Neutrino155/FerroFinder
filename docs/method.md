@@ -4,15 +4,15 @@
 
 The inference input is one polar endpoint: species, positions, unit cell, and
 periodicity. No known nonpolar parent or intermediate path structure is used.
-MACE-Field supplies Cartesian polarization (P), reduced polarization (p),
-and Born effective charges (Z^*_{i,ab}).
+MACE-Field supplies Cartesian polarization $P$, reduced polarization $p$,
+and Born effective charges $Z^*_{i,ab}$.
 
-With ASE's row-vector cell matrix (H) and volume \(\Omega=|\det H|\), the
+With ASE's row-vector cell matrix $H$ and volume $\Omega=|\det H|$, the
 dimensionless reduced polarization is
 
-\[
+$$
 p=\Omega H^{-T}P.
-\]
+$$
 
 The candidate targets are the inversion-invariant formal classes in reduced
 polarization space, reduced to symmetry-distinct orbits of the polar endpoint.
@@ -23,23 +23,23 @@ residual, and point-group polarity.
 
 ## Generalized inverse distortion
 
-The generalized coordinate is \(q=(R,\eta)\), with Cartesian atomic
-positions (R) and six symmetric logarithmic-strain coordinates \(\eta\).
+The generalized coordinate is $q=(R,\eta)$, with Cartesian atomic
+positions $R$ and six symmetric logarithmic-strain coordinates $\eta$.
 The cell is updated as
 
-\[
+$$
 H'=H\exp(\eta),\qquad
 J=\begin{bmatrix}J_R&J_\eta\end{bmatrix},\qquad
 J_R=\frac{\partial p}{\partial R},\quad
 J_\eta=\frac{\partial p}{\partial\eta}.
-\]
+$$
 
 At fixed cell the BEC block is
 
-\[
+$$
 \frac{\partial p_a}{\partial R_{ib}}
 =\left(H^{-T}\right)_{ac}Z^*_{i,cb}.
-\]
+$$
 
 When variable-cell backprojection is enabled, its lattice block is computed
 as six central differences of reduced polarization at fixed fractional
@@ -48,17 +48,17 @@ the piezoelectric contribution but kept in reduced-polarization coordinates
 for direct use in the inverse update. Each displaced polarization is matched
 to the reference Berry branch before differencing:
 
-\[
+$$
 (J_\eta)_{ak}\approx
 \frac{p_a(H\exp(\delta E_k))-p_a(H\exp(-\delta E_k))}{2\delta}.
-\]
+$$
 
-For polarization residual \(\Delta p=p_\mathrm{target}-p\), the minimum-metric
+For polarization residual $\Delta p=p_\mathrm{target}-p$, the minimum-metric
 step is
 
-\[
+$$
 \Delta q=W^{-1}J^T(JW^{-1}J^T)^+\Delta p,
-\]
+$$
 
 where atomic coordinates use unit metric weight and logarithmic strains use
 weight 25 by default. The pseudoinverse handles rank-deficient response.
