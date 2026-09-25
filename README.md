@@ -1,5 +1,5 @@
 <p align="center">
-<img src="ferrofinder_logo.png" alt="FerroFinder logo" width="600">
+<img src="ferrofinder_logo.png" alt="FerroFinder logo" width="400">
 </p>
 
 # FerroFinder
