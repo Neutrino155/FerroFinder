@@ -1,0 +1,10 @@
+{
+  "schema": "ferrofinder.recovery_explorer.v1",
+  "queries": [
+    {
+      "query_id": "query_0000_branch_01",
+      "formula": "Al2N2",
+      "name": "AlN.cif \u00b7 branch 1"
+    }
+  ]
+}

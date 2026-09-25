@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FerroFinder batch recovery</title>
+<style>body{font:15px system-ui,sans-serif;margin:2rem auto;max-width:1500px;padding:0 1rem;color:#193346}h1{margin-bottom:.3rem}.muted{color:#627989}.summary{padding:1rem;background:#eff5f7;border-radius:8px;margin:1rem 0}input{padding:.6rem;width:min(100%,32rem);border:1px solid #9badb8;border-radius:5px}table{border-collapse:collapse;width:100%;margin-top:1rem}th,td{border-bottom:1px solid #d7e0e5;padding:.55rem;text-align:left;vertical-align:top}th{background:#f4f7f8;position:sticky;top:0}a{color:#126e75}</style>
+<h1>FerroFinder recovery results</h1>
+<p class="muted">Endpoint-only parent hypotheses and sampled P → N → −P branches. Paths are geometric reconstructions, not relaxed barriers.</p>
+<div class="summary">Materials: 1 · variable cell: True · initial relaxation: True · images per branch: 17 · BECs per image: True · polarizability per image: True</div>
+<label>Filter materials <input id="filter" type="search" placeholder="formula, filename, status"></label>
+<table><thead><tr><th>Input</th><th>Formula</th><th>Atoms</th><th>Parent proposals</th><th>Branches</th><th>Status</th><th>Explore</th><th>Report</th><th>Initial relaxation</th><th>Relaxed input</th></tr></thead><tbody><tr><td>AlN.cif</td><td>Al2N2</td><td>4</td><td>6</td><td>1</td><td>complete</td><td><a href="explorer/index.html?query=query_0000_branch_01">branch 1</a></td><td><a href="report.json">report</a></td><td>converged</td><td><a href="relaxed_input.extxyz">download</a></td></tr></table>
+<script>document.getElementById('filter').addEventListener('input',event=>{const q=event.target.value.toLowerCase();document.querySelectorAll('tbody tr').forEach(row=>row.hidden=!row.textContent.toLowerCase().includes(q));});</script>
+</html>

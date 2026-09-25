@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "input_sha256": "03ba781abc712f1ea3cbc2cbb03a1d4e505d51f9d58f95500ebe2083db539d64",
+  "configuration_sha256": "7de94270f97b1e73ebc5c64ecca43fafc000fc8dee78f7eba126e8f72240c1c1",
+  "model_sha256": "f92e043aaf2cd8879919db8452503553fe7b608cb749d8d169dd96d4aa094aa2",
+  "relaxed_input_file": "relaxed_input.extxyz",
+  "row": {
+    "query_id": "query_0000",
+    "display_name": "AlN.cif",
+    "formula": "Al2N2",
+    "atom_count": 4,
+    "status": "complete",
+    "parent_candidate_count": 6,
+    "branch_count": 1,
+    "elapsed_seconds": 89.44902803900186,
+    "material_dir": ".",
+    "relaxed_input_file": "relaxed_input.extxyz",
+    "relaxation_converged": true,
+    "branches": [
+      {
+        "branch_id": "query_0000_branch_01",
+        "branch_index": 1,
+        "candidate_id": "inversion_parent_endpoint_00",
+        "image_count": 17,
+        "payload_file": "payload_branch_01.json",
+        "properties_file": "path_properties_branch_01.json"
+      }
+    ]
+  },
+  "payload_files": [
+    "payload_branch_01.json"
+  ]
+}

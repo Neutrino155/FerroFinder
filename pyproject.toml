@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ferrofinder"
+version = "0.3.0"
+description = "Endpoint-only reconstruction of nonpolar parents and polarization branches with MACE-Field"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+keywords = ["ferroelectricity", "materials science", "MACE-Field", "polarization"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "ase>=3.23",
+    "numpy>=1.23",
+    "networkx>=3.0",
+    "scipy>=1.8",
+    "spglib>=2.0",
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.6"]
+dev = ["matplotlib>=3.6", "pytest>=8", "ruff>=0.16"]
+
+[project.scripts]
+ferrofinder = "ferrofinder.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ferrofinder*"]
+
+[tool.setuptools.package-data]
+"ferrofinder.visualization" = ["*.js"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

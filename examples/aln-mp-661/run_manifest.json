@@ -1,0 +1,99 @@
+{
+  "schema": "ferrofinder.batch_recovery.v1",
+  "status": "complete",
+  "started_utc": "2026-09-25T09:42:56.560774+00:00",
+  "model": "/home/brad/repositories/ferrofinder/MACEField-MH-0-omat-dielectric.model",
+  "head": "pt_head",
+  "identity": {
+    "model_sha256": "f92e043aaf2cd8879919db8452503553fe7b608cb749d8d169dd96d4aa094aa2",
+    "configuration_sha256": "7de94270f97b1e73ebc5c64ecca43fafc000fc8dee78f7eba126e8f72240c1c1",
+    "inputs": [
+      {
+        "query_id": "query_0000",
+        "display_name": "AlN.cif",
+        "source": "/home/brad/repositories/ferrofinder/AlN.cif",
+        "frame_index": 0,
+        "formula": "Al2N2",
+        "atom_count": 4,
+        "input_sha256": "03ba781abc712f1ea3cbc2cbb03a1d4e505d51f9d58f95500ebe2083db539d64",
+        "input_error": null
+      }
+    ]
+  },
+  "settings": {
+    "variable_cell": true,
+    "num_images": 17,
+    "compute_becs": true,
+    "compute_polarizability": true,
+    "max_branch_candidates": 1,
+    "recovery_config": {
+      "symprec": 0.01,
+      "polarization_distance_tolerance": 0.08,
+      "polarization_tolerance": 0.001,
+      "strain_delta": 0.0005,
+      "atomic_metric": 1.0,
+      "strain_metric": 25.0
+    },
+    "recovery_options": {
+      "max_formal_targets": 8,
+      "parent_symmetry_levels": 8,
+      "bec_max_iterations": 5,
+      "bec_max_step_A": 0.12,
+      "bec_variable_cell": true,
+      "bec_max_strain_step": 0.02,
+      "bec_strain_response_refresh": 4,
+      "bec_cell_stretch_min": 0.85,
+      "bec_cell_stretch_max": 1.15,
+      "bec_cell_volume_min": 0.7,
+      "bec_cell_volume_max": 1.3,
+      "max_branch_candidates": 1,
+      "num_images": 17,
+      "max_inversion_centers": 12,
+      "max_inversion_candidates": 3,
+      "max_symmetry_candidates": 3
+    },
+    "head": "pt_head",
+    "device": "cpu",
+    "dtype": "float64",
+    "threads": 1,
+    "initial_structure_relaxation": {
+      "enabled": true,
+      "rattle_stdev_A": 0.01,
+      "fmax_eV_per_A": 0.05,
+      "max_steps": 500,
+      "optimizer": "ASE BFGS",
+      "cell_filter": "FrechetCellFilter"
+    }
+  },
+  "input_count": 1,
+  "completed_count": 1,
+  "error_count": 0,
+  "no_branch_count": 0,
+  "relaxation_not_converged_count": 0,
+  "materials": [
+    {
+      "query_id": "query_0000",
+      "display_name": "AlN.cif",
+      "formula": "Al2N2",
+      "atom_count": 4,
+      "status": "complete",
+      "parent_candidate_count": 6,
+      "branch_count": 1,
+      "elapsed_seconds": 89.44902803900186,
+      "material_dir": ".",
+      "relaxed_input_file": "relaxed_input.extxyz",
+      "relaxation_converged": true,
+      "branches": [
+        {
+          "branch_id": "query_0000_branch_01",
+          "branch_index": 1,
+          "candidate_id": "inversion_parent_endpoint_00",
+          "image_count": 17,
+          "payload_file": "payload_branch_01.json",
+          "properties_file": "path_properties_branch_01.json"
+        }
+      ]
+    }
+  ],
+  "finished_utc": "2026-09-25T09:44:31.156277+00:00"
+}
